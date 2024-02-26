@@ -8,11 +8,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.sql.Driver;
 import java.time.Duration;
 import java.util.List;
 
-public class FindElements {
+public class FindElementTest {
 
     WebDriver driver;
 
@@ -34,16 +33,18 @@ public class FindElements {
         WebElement element = driver.findElement(By.tagName("h1"));
         System.out.println(element.getText());
 
-        WebElement element1 = driver.findElement(By.tagName("a1"));
+        WebElement element1 = driver.findElement(By.tagName("a1"));// когда  указываем не уникальный элемент
+        // селениум останавливается на первом
+        System.out.println(element1.getText()); // на данном сайте к этому элементу нет текста
 
-        // find element by tag
+        // find elements by tag
         List<WebElement> elements = driver.findElements(By.tagName("a"));
-        System.out.println(elements.size());
+        System.out.println(elements.size()); // получаем количество элементов
 
     }
 
     @Test
-    public void findElementBySampleLocator(){
+    public void findElementBySampleLocator(){ // поски элемента по:
         // id
         driver.findElement(By.id("city"));
         //className
@@ -56,7 +57,7 @@ public class FindElements {
     }
 
     @Test
-    public void findElementByCssSelectorTest(){
+    public void findElementByCssSelectorTest(){ // поиск по селектору
         // id -> #id
 //        driver.findElement(By.id("city"));
         driver.findElement(By.cssSelector("#city"));
