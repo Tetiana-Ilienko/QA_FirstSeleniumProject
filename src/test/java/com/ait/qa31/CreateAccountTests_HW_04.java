@@ -26,7 +26,7 @@ public class CreateAccountTests_HW_04 extends TestBase {
 
         driver.findElement(By.name("Email")).click();
         driver.findElement(By.name("Email")).clear();
-        driver.findElement(By.name("Email")).sendKeys("tt@gmail.com");
+        driver.findElement(By.name("Email")).sendKeys("tat3@gmail.com");
 
         driver.findElement(By.name("Password")).click();
         driver.findElement(By.name("Password")).clear();
@@ -36,10 +36,10 @@ public class CreateAccountTests_HW_04 extends TestBase {
         driver.findElement(By.name("ConfirmPassword")).clear();
         driver.findElement(By.name("ConfirmPassword")).sendKeys("77qazWsx$");
 
-        driver.findElement(By.xpath("//*[@class='button-1 register-next-step-button']")).click();
+        driver.findElement(By.cssSelector("[name='register-button']")).click();
 
-        Assert.assertTrue(isElementPresent(By.xpath("//*[text()='tt@gmail.com']")));
-//
+        Assert.assertTrue(isElementPresent(By.xpath("//*[text()='tat3@gmail.com']")));
+
 
     }
 }
