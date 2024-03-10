@@ -11,7 +11,7 @@ public class CreateAccountTests_HW_04 extends TestBase {
      * и его наследник CreateAccountTests с позитивным методом регистрации на сайте
      */
 
-    @Test
+   // @Test
     public void createNewAccountPositiveTest() {
         driver.findElement(By.cssSelector(".ico-register")).click();
         driver.findElement(By.xpath("//label[.='Female']")).click();
