@@ -1,4 +1,4 @@
-package com.ait.qa31;
+package com.ait.qa31.Theory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
